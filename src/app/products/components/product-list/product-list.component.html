@@ -1,0 +1,15 @@
+<div class='container mt-3'>
+  <a routerLink="/dashboard/create" class='btn btn-primary mb-3'>Add New Product</a>
+  <ul class='list-group'>
+    <li *ngFor='let product of (products$ | async)' class='list-group-item d-flex justify-content-between align-items-center'>
+      <div>
+        <strong>{{ product.title }}</strong> - {{ product.description }} <br>
+        Producer: {{ product.producer }} | Price: {{ product.price }} | In Stock: {{ product.inStock }}
+      </div>
+      <div>
+        <a [routerLink]="'/dashboard/edit/' + product.id" class='btn btn-sm btn-info mr-2'>Edit</a>
+        <button (click)='onDelete(product.id)' class='btn btn-sm btn-danger'>Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>

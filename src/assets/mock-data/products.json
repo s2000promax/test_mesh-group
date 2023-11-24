@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1c0a41bb-d3c4-4218-9f10-32df0063846e",
+    "title": "Product 1",
+    "description": "Description 1",
+    "producer": "Producer 1",
+    "price": 97.34,
+    "inStock": 13
+  },
+  {
+    "id": "0e1c7847-da83-4558-866c-8be656189ced",
+    "title": "Product 2",
+    "description": "Description 2",
+    "producer": "Producer 2",
+    "price": 297.34,
+    "inStock": 189
+  },
+  {
+    "id": "853bbd86-c6a7-40a0-bbae-07605d52fef8",
+    "title": "Product 3",
+    "description": "Description 3",
+    "producer": "Producer 3",
+    "price": 197.34,
+    "inStock": 264
+  },
+  {
+    "id": "13ca3da5-9a74-469c-8eb9-dcdb6b72157f",
+    "title": "Product 4",
+    "description": "Description 5",
+    "producer": "Producer 4",
+    "price": 7.34,
+    "inStock": 47
+  },
+  {
+    "id": "b16ecd2b-596e-4453-a05c-fe10d6f1a4c2",
+    "title": "Product 5",
+    "description": "Description 5",
+    "producer": "Producer 5",
+    "price": 997.34,
+    "inStock": 68
+  }
+]
