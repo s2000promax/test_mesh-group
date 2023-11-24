@@ -1,9 +1,13 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  OnInit,
+} from '@angular/core';
 import { Observable } from 'rxjs';
 import { IProduct } from '../../models/product.model';
 import { Store } from '@ngrx/store';
 import { selectAllProducts } from '../../store/selectors/product.selectors';
-import { fetchProductList } from '../../store/actions/list-product.actions';
 import { RouterLink } from '@angular/router';
 import { CommonModule, NgForOf } from '@angular/common';
 import { deleteProduct } from '../../store/actions/delete-product.actions';
@@ -19,7 +23,7 @@ import { deleteProduct } from '../../store/actions/delete-product.actions';
 export class ProductListComponent implements OnInit {
   products$!: Observable<IProduct[]>;
 
-  constructor(private store: Store) {}
+  private readonly store = inject(Store);
 
   ngOnInit(): void {
     this.products$ = this.store.select(selectAllProducts);
